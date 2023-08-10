@@ -1,4 +1,4 @@
-# MESSAIH
+# messAIh
 #### A dataset for Speech Emotion Recognition
 
 ---
