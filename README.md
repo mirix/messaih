@@ -58,8 +58,6 @@ The script reads the parquet file and produces the following:
    
 2. A folder named "wavs" containing the audio samples.
 
-You will need to change the paths in the "ytid_seg" column (twice if you run the script as it is).
-
 
 LEGAL CONSIDERATIONS
 
