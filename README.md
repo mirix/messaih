@@ -70,7 +70,7 @@ That, I believe, may keep us in the greyzone.
 
 CAVEATS
 
-As one can appreciate from the charts contained in the "chart" folder, the dataset is biased towards "positive" emotions, namely happiness.
+As one can appreciate from the charts contained in the "charts" folder, the dataset is biased towards "positive" emotions, namely happiness.
 
 Certain emotions such as fear may be underrepresented, not only in terms of number of occurences, but, more problematically, in terms of "intensity".
 
