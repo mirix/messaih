@@ -80,6 +80,6 @@ However, keep in mind that MOSEI was curated from a popular social network and s
 
 Moreover, certain emotions may be intrinsically more difficult to detect than others, even from a human perspective.
 
-Yet, MOSEI is possibly one of the best datasets in the public domain.
+Yet, MOSEI is possibly one of the best datasets of its kind currently in the public domain.
 
 Also note that the original [MOSEI](http://immortal.multicomp.cs.cmu.edu/CMU-MOSEI/labels/) contains nearly twice as many entries as MESSAIH does.
