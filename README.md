@@ -42,9 +42,9 @@ MESSAIH currently contains 13,234 speech samples annotated according to the [CMU
 > are annotated on a [0,3] Likert scale for presence of emotion
 > x: [0: no evidence of x, 1: weakly x, 2: x, 3: highly x].
 
-The dataset is provided as a [parquet file](https://drive.google.com/file/d/1d9IJ1mO1_OtgX09CqB58gxTlLYBuyRT_/view?usp=drive_link). 
+The dataset is provided as a [parquet file](https://drive.google.com/file/d/17qOa2cFDNCH2j2mL5gCNUOwLxpgnzPmB/view?usp=drive_link). 
 
-Provisionally, the file is stored on a [cloud drive](https://drive.google.com/file/d/1d9IJ1mO1_OtgX09CqB58gxTlLYBuyRT_/view?usp=drive_link) as it is too big for GitHub.
+Provisionally, the file is stored on a [cloud drive](https://drive.google.com/file/d/17qOa2cFDNCH2j2mL5gCNUOwLxpgnzPmB/view?usp=drive_link) as it is too big for GitHub. Note that the original parquet file from August 10th 2023 was buggy and so was the Python script. 
 
 To facilitate inspection, a truncated csv sample file is also provided, but it does not contain the audio arrays.
 
