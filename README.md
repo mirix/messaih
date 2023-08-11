@@ -68,7 +68,7 @@ Note that producing the wav files might (or might not) constitute copyright infr
 
 Instead, researchers are encouraged to use the numpy arrays contained in the last column of the dataset ("wav2numpy") directly, without actually extracting any playable audio.
 
-That, I believe, may keep us in the greyzone.
+That, I believe, may keep us in the grey zone.
 
 
 CAVEATS
