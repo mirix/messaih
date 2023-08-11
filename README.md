@@ -54,7 +54,7 @@ A sample Python script (check the top of the script for the requirements) is als
 
 The script reads the parquet file and produces the following:
 
-1. A csv file with file names and MOSEI values (columns names are self-explanatory). This file is identical to the one already provided.
+1. A csv file with file names and MOSEI values (columns names are self-explanatory).
    
 2. A folder named "wavs" containing the audio samples.
 
