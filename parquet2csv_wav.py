@@ -52,7 +52,7 @@ df2 = df2.with_columns(pl.col('ytid_seg').str.replace_all(bad_dir, sample_dir))
 def numpy2wav(row):
 	segment = os.path.splitext(os.path.basename(os.path.normpath(row[0])))[0]
 	print('PROCESSED:', segment)
-	write(sample_dir + segment + '.wav', 16000, np.array(row[1]))
+	write(sample_dir + segment + '.wav', 16000, np.array(row[1]).astype(np.int16))
 	return segment
 
 # Apply the function (this will take a while)
