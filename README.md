@@ -46,7 +46,7 @@ The dataset is provided as a [parquet file](https://drive.google.com/file/d/1d9I
 
 Provisionally, the file is stored on a [cloud drive](https://drive.google.com/file/d/1d9IJ1mO1_OtgX09CqB58gxTlLYBuyRT_/view?usp=drive_link) as it is too big for GitHub.
 
-To facilitate inspection, a csv file is also provided, but it does not contain the audio arrays.
+To facilitate inspection, a truncated csv sample file is also provided, but it does not contain the audio arrays.
 
 If you train a model on this dataset, you would make us very happy by letting us know.
 
