@@ -3,7 +3,8 @@ n_cores = str(os.cpu_count())
 os.environ['OMP_NUM_THREADS'] = n_cores
 os.environ['MKL_NUM_THREADS'] = n_cores
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"]="0,1"
+#os.environ["CUDA_VISIBLE_DEVICES"]="0,1"
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 
 import torch
 torch.backends.cuda.matmul.allow_tf32 = True
@@ -18,7 +19,7 @@ from sklearn.model_selection import train_test_split
 ### PARQUE DATASET ###
 
 columns = ['sentiment', 'wav2numpy']
-#df = pl.read_parquet('sqe_messai.parquet', columns = columns, n_rows = 100)
+#dfpl = pl.read_parquet('sqe_messai.parquet', columns = columns, n_rows = 1200)
 dfpl = pl.read_parquet('sqe_messai.parquet', columns = columns)
 df = dfpl.to_pandas()
 
@@ -100,7 +101,7 @@ training_args = TrainingArguments(
 	save_strategy='epoch',
 	#learning_rate=2e-5,
 	#weight_decay=0.01,
-	gradient_checkpointing=True,
+	#gradient_checkpointing=True,
 	per_device_train_batch_size=8,
 	#gradient_accumulation_steps=1,
 	per_device_eval_batch_size=8,
@@ -108,8 +109,8 @@ training_args = TrainingArguments(
 	num_train_epochs=100,
 	#warmup_ratio=0.1,
 	#logging_steps=10,
-	eval_steps=1000,
-	load_best_model_at_end=True,
+	eval_steps=100,
+	#load_best_model_at_end=True,
 	metric_for_best_model='accuracy',
 	overwrite_output_dir=True,
 	#greater_is_better=True,
@@ -127,14 +128,15 @@ training_args = TrainingArguments(
   output_dir='my_test_model',
   overwrite_output_dir=True,  
   group_by_length=True,
-  per_device_train_batch_size=16,
-  per_device_eval_batch_size=16,
+  per_device_train_batch_size=12,
+  per_device_eval_batch_size=12,
   evaluation_strategy='steps',
   num_train_epochs=100,
   #fp16=True,
   bf16=True,
   tf32=True,
   #optim='adamw_apex_fused',
+  #optim='adafactor',
   optim='adamw_torch_fused',
   gradient_accumulation_steps=8,
   gradient_checkpointing=True,
@@ -148,9 +150,10 @@ training_args = TrainingArguments(
   push_to_hub=False,
   metric_for_best_model='accuracy',
   greater_is_better=True,
-  load_best_model_at_end=True,
+  #load_best_model_at_end=True,
   do_train=True,
   do_eval=True,
+  #use_reentrant=False,
 )
 
 trainer = Trainer(
