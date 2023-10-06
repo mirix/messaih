@@ -30,7 +30,7 @@ DATASET DESCRIPTION
 
 The MESSAIH dataset is a fork of [CMU MOSEI](http://multicomp.cs.cmu.edu/resources/cmu-mosei-dataset/).
 
-Unlike its parent, MESSAIH is indended for unimodal model development and focusses exclusively on audio classification, more specifically, Speech Emotion Recognition (SER).
+Unlike its parent, MESSAIH is intended for unimodal model development and focuses exclusively on audio classification, more specifically, Speech Emotion Recognition (SER).
 
 Of course, it can be used for bimodal classification by transcribing each audio track.
 
